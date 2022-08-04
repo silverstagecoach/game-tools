@@ -90,7 +90,7 @@ function createGameCard(game) {
     <button onclick="updateGame(${game.id})">submit</button>
     <button onclick="deleteGame(${game.id})">delete</button>
     `
-    
+
     gamesContainer.appendChild(gameCard)
 }
 
@@ -101,6 +101,18 @@ function displayGames(arr) {
     }
 }
 
+function hideInput() {
+    let form = document.querySelector('form')
+    if (form.visibility === 'visible') {
+        visibility = 'collapse'
+    }
+    else {
+        visibility = 'visible'
+    }
+}
+
 form.addEventListener('submit', submitHandler)
+form.addEventListener('click', hideInput)
+
 
 getAllGames()
