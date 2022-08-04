@@ -101,18 +101,7 @@ function displayGames(arr) {
     }
 }
 
-function hideInput() {
-    let form = document.querySelector('form')
-    if (form.visibility === 'visible') {
-        visibility = 'collapse'
-    }
-    else {
-        visibility = 'visible'
-    }
-}
-
 form.addEventListener('submit', submitHandler)
-form.addEventListener('click', hideInput)
 
 
 getAllGames()
